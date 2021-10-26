@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start-dev": "nodemon app.js",
-    "start": "node app.js",
+    "start-dev": "env-cmd -f ./enviroments/dev nodemon app.js",
+    "start-stage": "env-cmd -f ./enviroments/stage node app.js",
+    "start-prod": "env-cmd -f ./enviroments/prod node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "env-cmd": "^10.1.0",
     "express": "^4.17.1",
     "mongoose": "^6.0.12",
     "nodemon": "^2.0.14"
