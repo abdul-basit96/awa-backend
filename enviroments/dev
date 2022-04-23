@@ -1,2 +1,4 @@
 PORT=5000
 DB=mongodb://localhost/awa
+SENDGRID_APIKEY=
+FROMEMAIL=
